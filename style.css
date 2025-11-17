@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: 'Courier New', monospace;
+    color: black;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+#story-text {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 30px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#interaction-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Styling for various UI elements */
+select, input, button {
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    min-width: 250px;
+    text-align: center;
+}
+
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="text"],
+input[type="number"] {
+    cursor: text;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    padding-right: 40px;
+}
+
+/* Animation for appearing elements */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.interaction-label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
